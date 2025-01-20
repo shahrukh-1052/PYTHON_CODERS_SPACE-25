@@ -1,3 +1,63 @@
+#This script demonstrates the usage and functionalities of four primary data structures in Python: 
+# lists, tuples, dictionaries, and sets.
+
+
+
+
+
+# SETS
+st = {"Habeebuddin", "Shahrukh", 56, 8712101952, True, "This is my Bio Data"}
+
+#1. add() - Adds a single element to the set.
+st.add("New Item")
+print(st)  # Output: {'Habeebuddin', 'Shahrukh', True, 56, "This is my Bio Data", 8712101952, 'New Item'}
+
+#2. update() - Adds multiple elements to the set.
+st.update([2.45, "Hola"])
+print(st)  # Output: {'Habeebuddin', 'Shahrukh', True, 56, "This is my Bio Data", 2.45, 8712101952, 'Hola', 'New Item'}
+
+#3. remove() - Removes a specific element from the set. Raises a KeyError if the element is not found.
+st.remove(56)
+print(st)  # Output: {'Habeebuddin', 'Shahrukh', True,"This is my Bio Data", 2.45, 8712101952, 'Hola', 'New Item'}
+
+#4. discard() - Removes a specific element from the set if it is found. Does not raise an error if the element is not found.
+st.discard("Espinol")
+print(st)  # Output: {'Habeebuddin', 'Shahrukh', True, 'Hola', "This is my Bio Data", 2.45, 8712101952, 'New Item'}
+
+#5. pop() - Removes and returns an arbitrary element from the set.
+popped_item = st.pop()
+print(popped_item)  # Output: (element that was removed)
+print(st)  # Output: (set after the element is removed)
+
+#6. clear() - Removes all elements from the set.
+st.clear()
+print(st)  # Output: set()
+
+#7. union() - Returns a new set that is the union of two sets.
+set1 = {"a", "b", "c"}
+set2 = {"c", "d", "e"}
+union_set = set1.union(set2)
+print(union_set)  # Output: {'a', 'b', 'c', 'd', 'e'}
+
+#8. intersection() - Returns a new set that is the intersection of two sets.
+intersection_set = set1.intersection(set2)
+print(intersection_set)  # Output: {'c'}
+
+#9. difference() - Returns a new set that contains elements in the first set but not the second.
+difference_set = set1.difference(set2)
+print(difference_set)  # Output: {'a', 'b'}
+
+#10. symmetric_difference() - Returns a new set that contains elements in either set but not both.
+symmetric_difference_set = set1.symmetric_difference(set2)
+print(symmetric_difference_set)  # Output: {'a', 'b', 'd', 'e'}
+
+#11. copy() - Returns a shallow copy of the set.
+copy_set = set1.copy()
+print(copy_set)  # Output: {'a', 'b', 'c'}
+
+print('=======================================================================')
+
+
 #LISTS
 lst = ["Habeebuddin","Shahrukh","2203A51495",56,8712101952,True,"This is my Bio Data" ,False]
 
@@ -121,3 +181,5 @@ print(new_dict) # Output: {'name': 'unknown', 'friend': 'unknown', 'id': 'unknow
 default_name = dct.setdefault('hobby', 'Reading')
 print(default_name)  # Output: Reading
 print(dct)  # Output: {'name': 'Habeebuddin', 'friend': 'Shahrukh', 'id': '2203A51495', 'phone': 8712101952, 'is_active': True, 'bio': 'This is my Bio Data', 'hobby': 'Reading'}
+
+
